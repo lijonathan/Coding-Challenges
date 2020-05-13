@@ -57,7 +57,9 @@ Follow up:
         // 1 = alive was alive
         // 2 = alive was dead
         // 3 = dead was alive
-        
+        // O(n) time where n = # cells on board
+        // O(1) space, in place
+
         for(int i = 0; i < board.length; ++i)
         {
             for(int k = 0; k < board[0].length; ++k)
