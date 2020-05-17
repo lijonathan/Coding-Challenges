@@ -30,9 +30,9 @@ approach, which is more subtle.
         // if the running sum > max_sum, set max_sum = sum
         // if current value is greater than sum --> whats been seen before
         // is negative, set current sum to curr index val and
-    	// continue summing
-    	
-    	// O(n) time, (1) space
+        // continue summing
+        
+        // O(n) time, (1) space
         int sum = 0;
         int max_sum = Integer.MIN_VALUE;
         for(int i = 0; i < nums.length; ++i)

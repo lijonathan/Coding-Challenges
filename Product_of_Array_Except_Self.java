@@ -19,9 +19,9 @@ Follow up:
 Could you solve it with constant space complexity?
 (The output array does not count as extra space for the purpose of space complexity analysis.)
 */
-	
+    
     public int[] productExceptSelf(int[] nums) {
-    	// O(n) run-time, O(1) space
+        // O(n) run-time, O(1) space
         int[] ans = new int[nums.length];
         ans[0] = 1;
         // Build array of product of everything to the left

@@ -18,17 +18,17 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 */
 
-	public class ListNode {
-		      int val;
-		      ListNode next;
-		      ListNode() {}
-		      ListNode(int val) { this.val = val; }
-		      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-	}
-	
+    public class ListNode {
+              int val;
+              ListNode next;
+              ListNode() {}
+              ListNode(int val) { this.val = val; }
+              ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+    
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    	// O(n) runtime where n is the longest of the two lists, O(1) additional
-    	// space excluding the newly created list
+        // O(n) runtime where n is the longest of the two lists, O(1) additional
+        // space excluding the newly created list
         ListNode head = new ListNode();
         ListNode iterator = head;
         boolean carry = false;

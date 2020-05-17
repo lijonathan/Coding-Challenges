@@ -18,21 +18,21 @@ Could you implement both?
 
 
 */
-	//O(n) time to traverse list, O(1) space excluding recursive call space
-	public class ListNode {
-	     int val;
-	     ListNode next;
-	     ListNode() {}
-	     ListNode(int val) { this.val = val; }
-	     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-	}
+    //O(n) time to traverse list, O(1) space excluding recursive call space
+    public class ListNode {
+         int val;
+         ListNode next;
+         ListNode() {}
+         ListNode(int val) { this.val = val; }
+         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
 
     private void traversal(ListNode sentinel, ListNode head)
     {
-    	// always move the next node as the next of
-    	// sentinel. Update current node's next to sentinel next
-    	// same as iterative, except traversal through list is
-    	// recursive
+        // always move the next node as the next of
+        // sentinel. Update current node's next to sentinel next
+        // same as iterative, except traversal through list is
+        // recursive
         if(head != null)
         {
             ListNode iter = head.next;
@@ -51,8 +51,8 @@ Could you implement both?
         ListNode sentinel = new ListNode();
         ListNode iterator;
         while(head != null)
-        {	// always move the next node as the next of
-        	// sentinel. Update current node's next to sentinel next
+        {   // always move the next node as the next of
+            // sentinel. Update current node's next to sentinel next
             iterator = head.next;
             head.next = sentinel.next;
             sentinel.next = head;

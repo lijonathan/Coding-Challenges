@@ -26,15 +26,15 @@ Input: "pwwkew"
 Output: 3
 Explanation: The answer is "wke", with the length of 3. 
              Note that the answer must be a substring, "pwke"
-			 is a subsequence and not a substring.
+             is a subsequence and not a substring.
 */
 
     public int lengthOfLongestSubstring(String s) {
         // sliding window
-    	// O(n) time -- 2n, if the left side of the window catches up
-    	// to the right
-    	// O(k) space -- where k is the min between the character subset
-    	// and the size of the string
+        // O(n) time -- 2n, if the left side of the window catches up
+        // to the right
+        // O(k) space -- where k is the min between the character subset
+        // and the size of the string
         HashSet<Character> hs = new HashSet<Character>();
         int max_length = 0;
         int left = 0;

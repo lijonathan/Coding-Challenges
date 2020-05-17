@@ -8,7 +8,7 @@ print out all values of each node in
 reverse with the help of the following interface:
 
     ImmutableListNode: An interface of immutable
-	linked list, you are given the head of the list.
+    linked list, you are given the head of the list.
 
 You need to use the following functions to access
 the linked list (you can't access the ImmutableListNode directly):
@@ -55,16 +55,16 @@ Constraints:
 
 
 */
-	 // This is the ImmutableListNode's API interface.
-	 // You should not implement it, or speculate about its implementation.
-	interface ImmutableListNode {
-		     public void printValue(); // print the value of this node.
-		     public ImmutableListNode getNext(); // return the next node.
-	};
-	
-	public void printLinkedListInReverse(ImmutableListNode head) {
-		// O(n) time, O(1) space excluding recursive call space
-		if(head.getNext() != null)
+     // This is the ImmutableListNode's API interface.
+     // You should not implement it, or speculate about its implementation.
+    interface ImmutableListNode {
+             public void printValue(); // print the value of this node.
+             public ImmutableListNode getNext(); // return the next node.
+    };
+    
+    public void printLinkedListInReverse(ImmutableListNode head) {
+        // O(n) time, O(1) space excluding recursive call space
+        if(head.getNext() != null)
         {
             printLinkedListInReverse(head.getNext());
         }

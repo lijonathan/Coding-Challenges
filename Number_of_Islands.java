@@ -33,7 +33,7 @@ Output: 3
 
 */
 
-	public void bfs(char[][] grid, int y, int x)
+    public void bfs(char[][] grid, int y, int x)
     {
         ArrayDeque<Integer> dq = new ArrayDeque<Integer>();
         dq.offerLast(x);
@@ -86,9 +86,9 @@ Output: 3
         return;
     }
     public int numIslands(char[][] grid) {
-    	// O(mn) m = # rows, n = # cols
-    	// O(min(m, n)) size of the queue if everything
-    	// is land
+        // O(mn) m = # rows, n = # cols
+        // O(min(m, n)) size of the queue if everything
+        // is land
         int num_islands = 0;
         for(int i = 0; i < grid.length; ++i)
         {

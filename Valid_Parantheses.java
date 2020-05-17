@@ -44,9 +44,9 @@ Output: true
 */
 
     public boolean isValid(String s) {
-    	// O(n) space for stack
-    	// O(n) time
-    	// n is the number of characters in s
+        // O(n) space for stack
+        // O(n) time
+        // n is the number of characters in s
         Stack stack = new Stack();
         for (int i = 0; i < s.length(); ++i)
         {

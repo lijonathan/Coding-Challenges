@@ -29,8 +29,8 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 */
 
     public int maxProfit(int[] prices) {
-    	//O(n) time, O(1) space
-    	
+        //O(n) time, O(1) space
+        
         // one pass 
         // keep track of min_value currently seen and subtract every current 
         // index with min value for max diff

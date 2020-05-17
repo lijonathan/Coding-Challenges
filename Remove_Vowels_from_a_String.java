@@ -28,8 +28,8 @@ Note:
 */
 
     public String removeVowels(String S) {
-    	// O(n) space, O(n) time
-    	// n = # of characters in S
+        // O(n) space, O(n) time
+        // n = # of characters in S
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < S.length(); ++i)
         {

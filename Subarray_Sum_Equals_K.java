@@ -20,14 +20,14 @@ Constraints:
 
     The length of the array is in range [1, 20,000].
     The range of numbers in the array is [-1000, 1000]
-	and the range of the integer k is [-1e7, 1e7].
+    and the range of the integer k is [-1e7, 1e7].
 
 
 */
-	public int subarraySum(int[] nums, int k) {
+    public int subarraySum(int[] nums, int k) {
         //brute force, O(n^2) try every possible subarray
         // O(n) runtime - 1 pass over array,
-		// O(n) space for every sum starting from left
+        // O(n) space for every sum starting from left
         HashMap<Integer, Integer> sum_counts = new HashMap<Integer, Integer>();
         
         int total_arrays = 0;
@@ -35,8 +35,8 @@ Constraints:
         sum_counts.put(0, 1);
         // put 0 into HashMap so if current subarray from 0 to index, = k
         for(int j = 0; j < nums.length; ++j)
-        {	
-        	// Sum from the left side, 0 index
+        {   
+            // Sum from the left side, 0 index
             curr_sum += nums[j];
             // count how many subarrays to left index j have difference
             // between k and current sum, add those to total

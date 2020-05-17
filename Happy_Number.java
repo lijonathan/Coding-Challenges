@@ -28,14 +28,14 @@ Explanation:
 
 */
     public boolean isHappy(int n) {
-    	// O(logn) time, O(logn) space
+        // O(logn) time, O(logn) space
         HashSet<Integer> set = new HashSet<Integer>();
         while (true)
         {
             int sum = 0;
             while(n > 0)
             {
-            	// a smaller number mod x = smaller number
+                // a smaller number mod x = smaller number
                 sum += (n % 10) * (n % 10);
                 n = n / 10;
             }

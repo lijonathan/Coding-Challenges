@@ -63,8 +63,8 @@ Constraints:
 */
 
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-    	// O(n) time
-    	// O(n) space
+        // O(n) time
+        // O(n) space
         ArrayList<Boolean> ans = new ArrayList<Boolean>();
         int max = Integer.MIN_VALUE;
         for(int i = 0; i < candies.length; ++i)

@@ -16,8 +16,8 @@ Note:
 
 */
     public String addStrings(String num1, String num2) {
-    	//O(n) time, O(n) space where n = length of longest string
-    	StringBuffer sb = new StringBuffer();
+        //O(n) time, O(n) space where n = length of longest string
+        StringBuffer sb = new StringBuffer();
         int l1 = num1.length();
         int l2 = num2.length();
         int length = Math.max(l1, l2);

@@ -31,7 +31,7 @@ Constraints:
 */
 
     public String defangIPaddr(String address) {
-    	// O(n) time, O(n) space, n = # of characters in address
+        // O(n) time, O(n) space, n = # of characters in address
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < address.length(); ++i)
         {
