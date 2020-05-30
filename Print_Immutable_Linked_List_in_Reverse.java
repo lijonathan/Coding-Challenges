@@ -62,6 +62,13 @@ Constraints:
              public ImmutableListNode getNext(); // return the next node.
     };
     
+    public void printLinkedListInReverse_faster(ImmutableListNode head) { // a little bit faster
+        if(head != null)
+        {
+            printLinkedListInReverse(head.getNext());
+            head.printValue();
+        }
+    }
     public void printLinkedListInReverse(ImmutableListNode head) {
         // O(n) time, O(1) space excluding recursive call space
         if(head.getNext() != null)
