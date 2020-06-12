@@ -63,6 +63,8 @@ Note:
     public int[] topKFrequent(int[] nums, int k) {
         // O(n log k) runtime
         // O(n) space for HashMap
+        // Runtime: 8ms faster than 93.48% of Java online submissions
+        // Memory Usage: 42.3MB, less than 31.88% of Java online submissions
         PriorityQueue<Pair> pq = new PriorityQueue<Pair>(new min_compare());
         HashMap<Integer, Integer> counts = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; ++i)
