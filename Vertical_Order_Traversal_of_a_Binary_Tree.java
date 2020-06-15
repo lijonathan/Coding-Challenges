@@ -5,7 +5,7 @@ import java.util.List;
 
 class Vertical_Order_Traversal_of_a_Binary_Tree {
 
-    /*
+/*
 Rating: Medium
 
 Given a binary tree, return the vertical order traversal of its nodes values.
