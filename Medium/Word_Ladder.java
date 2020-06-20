@@ -66,8 +66,8 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
         // O(m^2) * (n) n words = n hashmap entries. Each hashmap entry has a key of length
         // m and the list of length m(m is avg length)
         
-        // Runtime: 202ms beats 28.07% of Java online submissions
-        // Memory Usage: 43.8MB beats 36.80% of Java online submissions
+        // Runtime: 151 ms, faster than 34.09% of Java online submissions
+        // Memory Usage: 43.9 MB, less than 36.89% of Java online submissions
         // memory and runtime are asymptotically in line
         HashSet<String> hs = new HashSet<String>(wordList);
         if (!hs.contains(endWord))
@@ -84,6 +84,11 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
         while(!queue.isEmpty())
         {
             String curr = queue.remove();
+            ArrayList<String> prev_link = links.get(curr);
+	        if (curr.equals(endWord))
+	        {
+	            return prev_link.size();
+	        }
             for (int i = 0; i < curr.length(); ++i)
             {
                 for (int k = 97; k <= 122; ++k)
@@ -93,11 +98,6 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
                     String replaced = sb.toString();
                     if (hs.contains(replaced))
                     {
-                        ArrayList<String> prev_link = links.get(curr);
-                        if (curr.equals(endWord))
-                        {
-                            return prev_link.size();
-                        }
                         ArrayList<String> curr_link = links.get(replaced);
                         if (curr_link == null)
                         {
