@@ -29,7 +29,7 @@ Explanation: t is "aabbb" which its length is 5.
 */
 
     // O(n) runtime
-    // O(26) space for HashMap of character counts
+    // O(3) space for HashMap of character counts --> at most can contain 3 characters
     // Runtime: 5 ms, faster than 69.34% of Java online submissions
     // Memory Usage: 39.4 MB, less than 65.22% of Java online submissions
     public int lengthOfLongestSubstringTwoDistinct(String s) {
