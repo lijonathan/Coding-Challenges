@@ -50,7 +50,7 @@ Return false.
 /*
     Approach: If the root of the subtree and the current node in the larger tree have the same value
               check if the smaller tree and the current subtree are equal. Recurse through both trees
-              checking that that the samller tree and the current subtree are equal.
+              checking that that the smaller tree and the current subtree are equal.
 */
 
     // Definition for a binary tree node.
