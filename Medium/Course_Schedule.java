@@ -41,7 +41,7 @@ Constraints:
     Approach: This is a graph cycle detection problem. Create an adjacency list from all the courses
               and their corresponding edges.
 
-              3 Arrays that mark visited, unvisited, currently visiting.
+              2 Arrays that mark unvisited, currently visiting.
 
               DFS from any starting vertex. Mark current as visiting. For each neighbor, if it is unvisited,
               dfs to that neighbor. Otherwise, if it is currently visiting, a cycle has been
@@ -53,8 +53,8 @@ Constraints:
     // O(V + E) space
     // Runtime: 2 ms, faster than 99.70% of Java online submissions
     // Memory Usage: 40.1 MB, less than 72.42% of Java online submissions
-    public boolean dfs(ArrayList<Integer>[] adj_list, boolean[] unvisited, boolean[] visited,
-            boolean[] visiting, int curr)
+    public boolean dfs(ArrayList<Integer>[] adj_list, boolean[] unvisited,
+                       boolean[] visiting, int curr)
     {
         ArrayList<Integer> edges = adj_list[curr];
         if (edges == null)
@@ -70,7 +70,7 @@ Constraints:
             int neighbor = edges.get(i);
             if (unvisited[neighbor])
             {
-                if(dfs(adj_list, unvisited, visited, visiting, neighbor))
+                if(dfs(adj_list, unvisited, visiting, neighbor))
                 {
                     cycle = true;
                     break;
@@ -82,7 +82,6 @@ Constraints:
             }
         }
         visiting[curr] = false;
-        visited[curr] = true;
         return cycle;
     }
     public boolean canFinish(int numCourses, int[][] prerequisites) {
@@ -97,8 +96,7 @@ Constraints:
             }
             adj_list[course].add(prerequisites[i][0]);
         }
-
-        boolean[] visited = new boolean[numCourses];
+        
         boolean[] visiting = new boolean[numCourses];
         boolean[] unvisited = new boolean[numCourses];
         Arrays.fill(unvisited, true);
@@ -106,7 +104,7 @@ Constraints:
         {
             if (unvisited[i])
             {
-                if (dfs(adj_list, unvisited, visited, visiting, i))
+                if (dfs(adj_list, unvisited, visiting, i))
                 {
                     return false;
                 }
